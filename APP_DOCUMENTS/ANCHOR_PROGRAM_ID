@@ -1,0 +1,35 @@
+4YQMDNA5DtsLxNMySEYHbdjj6CPvtRseQ5sgTqmHxt6D
+
+Program ID: 4YQMDNA5DtsLxNMySEYHbdjj6CPvtRseQ5sgTqmHxt6D
+IDL account: Hwbx7JiXpzyKLtXunSM4v5sK4ZQWZf91jrrXdtrW8b6N
+
+
+# token info
+Creating token EPGoVU5wzZFxL9hu16Dhn3wtyz1P1mPMGQ9Y1KzMebv3 under program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA
+
+Address:  EPGoVU5wzZFxL9hu16Dhn3wtyz1P1mPMGQ9Y1KzMebv3
+Decimals:  9
+
+Signature: 4x4WMF3TxDzKEUdinqpaTM3rNAP4pxzZe8iK5n82fDNYqjmu5QRjoXujuCsgdwKLbvAW5h5wzaxbKP4yzAZvtpZh
+
+
+Creating account BErXKVwNbuqhURFE5znTgV5vWk2tLkVp4WBRh9d9g9SP
+
+Signature: 4cWXyBvAvuDMFETvCDY6csu1CT3TXGPQPc4Z6rKVvZ7qmS4GWviheMxtBuYr8E6Ng8BTHWft1ytShcSjKmCgYbK6
+
+Minting 10000000 tokens
+  Token: EPGoVU5wzZFxL9hu16Dhn3wtyz1P1mPMGQ9Y1KzMebv3
+  Recipient: BErXKVwNbuqhURFE5znTgV5vWk2tLkVp4WBRh9d9g9SP
+
+Signature: 5FgzN784WTn4GrBbgZjjTe7jpHQ3Z7wrZGh5hvkUetHT23fFVziPhWJBtjTp9kamVFdvCkB9APybeaKZpcjWta1Q
+
+
+spl-token authorize EPGoVU5wzZFxL9hu16Dhn3wtyz1P1mPMGQ9Y1KzMebv3 mint --disable
+
+
+!IMPORTANT
+
+Script is ready. To run it you'll need ts-node in the anchor directory:
+
+cd /Users/tonyanglesey/Work/Sparks-03-23-2026\ USE\ THIS/sparks-presale/anchor
+npm init -y && npm install ts-node typescript @coral-xyz/anchor @solana/web3.js
