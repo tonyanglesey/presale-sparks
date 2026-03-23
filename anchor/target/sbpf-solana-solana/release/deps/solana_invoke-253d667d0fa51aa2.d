@@ -1,0 +1,9 @@
+/Users/tonyanglesey/Work/Sparks-03-23-2026 USE THIS/sparks-presale/anchor/target/sbpf-solana-solana/release/deps/solana_invoke-253d667d0fa51aa2.d: /Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-invoke-0.4.0/src/lib.rs /Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-invoke-0.4.0/src/stable_instruction_borrowed.rs /Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-invoke-0.4.0/src/../README.md
+
+/Users/tonyanglesey/Work/Sparks-03-23-2026 USE THIS/sparks-presale/anchor/target/sbpf-solana-solana/release/deps/libsolana_invoke-253d667d0fa51aa2.rlib: /Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-invoke-0.4.0/src/lib.rs /Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-invoke-0.4.0/src/stable_instruction_borrowed.rs /Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-invoke-0.4.0/src/../README.md
+
+/Users/tonyanglesey/Work/Sparks-03-23-2026 USE THIS/sparks-presale/anchor/target/sbpf-solana-solana/release/deps/libsolana_invoke-253d667d0fa51aa2.rmeta: /Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-invoke-0.4.0/src/lib.rs /Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-invoke-0.4.0/src/stable_instruction_borrowed.rs /Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-invoke-0.4.0/src/../README.md
+
+/Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-invoke-0.4.0/src/lib.rs:
+/Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-invoke-0.4.0/src/stable_instruction_borrowed.rs:
+/Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-invoke-0.4.0/src/../README.md:

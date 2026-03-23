@@ -1,0 +1,852 @@
+{
+  "address": "4YQMDNA5DtsLxNMySEYHbdjj6CPvtRseQ5sgTqmHxt6D",
+  "metadata": {
+    "name": "sparks_presale",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Sparks $SPRKS Token Presale Program"
+  },
+  "instructions": [
+    {
+      "name": "buy_tokens",
+      "docs": [
+        "Purchase SPRKS tokens. SOL is transferred directly to the admin treasury.",
+        "Allocation is recorded on-chain; tokens are claimed after presale ends."
+      ],
+      "discriminator": [
+        189,
+        21,
+        230,
+        133,
+        247,
+        2,
+        110,
+        42
+      ],
+      "accounts": [
+        {
+          "name": "buyer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "authority",
+          "writable": true
+        },
+        {
+          "name": "presale_state",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  114,
+                  101,
+                  115,
+                  97,
+                  108,
+                  101,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "user_allocation",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  108,
+                  108,
+                  111,
+                  99,
+                  97,
+                  116,
+                  105,
+                  111,
+                  110
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "buyer"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "lamports",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "claim_tokens",
+      "docs": [
+        "User claims their SPRKS allocation from the vault."
+      ],
+      "discriminator": [
+        108,
+        216,
+        210,
+        231,
+        0,
+        212,
+        42,
+        64
+      ],
+      "accounts": [
+        {
+          "name": "buyer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "presale_state",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  114,
+                  101,
+                  115,
+                  97,
+                  108,
+                  101,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "user_allocation",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  108,
+                  108,
+                  111,
+                  99,
+                  97,
+                  116,
+                  105,
+                  111,
+                  110
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "buyer"
+              }
+            ]
+          }
+        },
+        {
+          "name": "token_vault",
+          "writable": true
+        },
+        {
+          "name": "user_token_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "buyer"
+              },
+              {
+                "kind": "const",
+                "value": [
+                  6,
+                  221,
+                  246,
+                  225,
+                  215,
+                  101,
+                  161,
+                  147,
+                  217,
+                  203,
+                  225,
+                  70,
+                  206,
+                  235,
+                  121,
+                  172,
+                  28,
+                  180,
+                  133,
+                  237,
+                  95,
+                  91,
+                  55,
+                  145,
+                  58,
+                  140,
+                  245,
+                  133,
+                  126,
+                  255,
+                  0,
+                  169
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "token_mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "token_mint"
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "associated_token_program",
+          "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "deposit_tokens",
+      "docs": [
+        "Deposit SPRKS tokens into the vault (admin only, before or during presale)."
+      ],
+      "discriminator": [
+        176,
+        83,
+        229,
+        18,
+        191,
+        143,
+        176,
+        150
+      ],
+      "accounts": [
+        {
+          "name": "authority",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "presale_state",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  114,
+                  101,
+                  115,
+                  97,
+                  108,
+                  101,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "token_vault",
+          "writable": true
+        },
+        {
+          "name": "admin_token_account",
+          "writable": true
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        }
+      ],
+      "args": [
+        {
+          "name": "amount",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "enable_claims",
+      "docs": [
+        "Admin: flip the switch to enable claims (call after presale ends)."
+      ],
+      "discriminator": [
+        56,
+        47,
+        60,
+        155,
+        110,
+        73,
+        10,
+        82
+      ],
+      "accounts": [
+        {
+          "name": "authority",
+          "signer": true,
+          "relations": [
+            "presale_state"
+          ]
+        },
+        {
+          "name": "presale_state",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  114,
+                  101,
+                  115,
+                  97,
+                  108,
+                  101,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "initialize",
+      "docs": [
+        "Initialize the presale.",
+        "",
+        "`founding_lamports_per_sprks`, `early_lamports_per_sprks`, and",
+        "`public_lamports_per_sprks` are the SOL cost (in lamports) to purchase",
+        "ONE displayed SPRKS token.",
+        "",
+        "Example at SOL = $135:",
+        "Founding ($0.05/SPRKS): 0.05 / 135 * 1e9 ≈ 370_370",
+        "Early    ($0.10/SPRKS): 0.10 / 135 * 1e9 ≈ 740_741",
+        "Public   ($0.20/SPRKS): 0.20 / 135 * 1e9 ≈ 1_481_481"
+      ],
+      "discriminator": [
+        175,
+        175,
+        109,
+        31,
+        13,
+        152,
+        155,
+        237
+      ],
+      "accounts": [
+        {
+          "name": "authority",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "presale_state",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  114,
+                  101,
+                  115,
+                  97,
+                  108,
+                  101,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "token_mint"
+        },
+        {
+          "name": "token_vault",
+          "docs": [
+            "PDA-owned token vault — holds SPRKS for distribution during claims"
+          ],
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  116,
+                  111,
+                  107,
+                  101,
+                  110,
+                  95,
+                  118,
+                  97,
+                  117,
+                  108,
+                  116
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "rent",
+          "address": "SysvarRent111111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "presale_start",
+          "type": "i64"
+        },
+        {
+          "name": "presale_end",
+          "type": "i64"
+        },
+        {
+          "name": "founding_lamports_per_sprks",
+          "type": "u64"
+        },
+        {
+          "name": "early_lamports_per_sprks",
+          "type": "u64"
+        },
+        {
+          "name": "public_lamports_per_sprks",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "set_active",
+      "docs": [
+        "Admin: pause / resume the presale."
+      ],
+      "discriminator": [
+        29,
+        16,
+        225,
+        132,
+        38,
+        216,
+        206,
+        33
+      ],
+      "accounts": [
+        {
+          "name": "authority",
+          "signer": true,
+          "relations": [
+            "presale_state"
+          ]
+        },
+        {
+          "name": "presale_state",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  114,
+                  101,
+                  115,
+                  97,
+                  108,
+                  101,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "args": [
+        {
+          "name": "active",
+          "type": "bool"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "PresaleState",
+      "discriminator": [
+        32,
+        18,
+        85,
+        188,
+        213,
+        180,
+        10,
+        241
+      ]
+    },
+    {
+      "name": "UserAllocation",
+      "discriminator": [
+        165,
+        18,
+        77,
+        48,
+        189,
+        20,
+        97,
+        217
+      ]
+    }
+  ],
+  "events": [
+    {
+      "name": "TokensClaimed",
+      "discriminator": [
+        25,
+        128,
+        244,
+        55,
+        241,
+        136,
+        200,
+        91
+      ]
+    },
+    {
+      "name": "TokensPurchased",
+      "discriminator": [
+        214,
+        119,
+        105,
+        186,
+        114,
+        205,
+        228,
+        181
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "PresaleNotActive",
+      "msg": "Presale is not active"
+    },
+    {
+      "code": 6001,
+      "name": "PresaleNotStarted",
+      "msg": "Presale has not started yet"
+    },
+    {
+      "code": 6002,
+      "name": "PresaleEnded",
+      "msg": "Presale has ended"
+    },
+    {
+      "code": 6003,
+      "name": "AllTiersSoldOut",
+      "msg": "All tiers are sold out"
+    },
+    {
+      "code": 6004,
+      "name": "TierSoldOut",
+      "msg": "Current tier is sold out"
+    },
+    {
+      "code": 6005,
+      "name": "WalletCapExceeded",
+      "msg": "Wallet cap for this tier exceeded"
+    },
+    {
+      "code": 6006,
+      "name": "InvalidAmount",
+      "msg": "Invalid purchase amount"
+    },
+    {
+      "code": 6007,
+      "name": "ClaimsNotEnabled",
+      "msg": "Claims are not enabled yet"
+    },
+    {
+      "code": 6008,
+      "name": "AlreadyClaimed",
+      "msg": "Tokens already claimed"
+    },
+    {
+      "code": 6009,
+      "name": "NothingToClaim",
+      "msg": "No tokens to claim"
+    },
+    {
+      "code": 6010,
+      "name": "Unauthorized",
+      "msg": "Unauthorized"
+    },
+    {
+      "code": 6011,
+      "name": "ArithmeticOverflow",
+      "msg": "Arithmetic overflow"
+    }
+  ],
+  "types": [
+    {
+      "name": "PresaleState",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "authority",
+            "type": "pubkey"
+          },
+          {
+            "name": "token_mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "token_vault",
+            "type": "pubkey"
+          },
+          {
+            "name": "presale_start",
+            "type": "i64"
+          },
+          {
+            "name": "presale_end",
+            "type": "i64"
+          },
+          {
+            "name": "is_active",
+            "type": "bool"
+          },
+          {
+            "name": "claims_enabled",
+            "type": "bool"
+          },
+          {
+            "name": "founding_sold",
+            "type": "u64"
+          },
+          {
+            "name": "early_sold",
+            "type": "u64"
+          },
+          {
+            "name": "public_sold",
+            "type": "u64"
+          },
+          {
+            "name": "total_lamports_raised",
+            "type": "u64"
+          },
+          {
+            "name": "founding_lamports_per_sprks",
+            "type": "u64"
+          },
+          {
+            "name": "early_lamports_per_sprks",
+            "type": "u64"
+          },
+          {
+            "name": "public_lamports_per_sprks",
+            "type": "u64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "vault_bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TokensClaimed",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "user",
+            "type": "pubkey"
+          },
+          {
+            "name": "tokens_raw",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TokensPurchased",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "buyer",
+            "type": "pubkey"
+          },
+          {
+            "name": "lamports",
+            "type": "u64"
+          },
+          {
+            "name": "tokens_raw",
+            "type": "u64"
+          },
+          {
+            "name": "tier",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "UserAllocation",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "user",
+            "type": "pubkey"
+          },
+          {
+            "name": "total_tokens",
+            "type": "u64"
+          },
+          {
+            "name": "founding_bought",
+            "type": "u64"
+          },
+          {
+            "name": "early_bought",
+            "type": "u64"
+          },
+          {
+            "name": "public_bought",
+            "type": "u64"
+          },
+          {
+            "name": "claimed",
+            "type": "bool"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    }
+  ]
+}

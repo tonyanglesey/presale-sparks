@@ -1,0 +1,11 @@
+/Users/tonyanglesey/Work/Sparks-03-23-2026 USE THIS/sparks-presale/anchor/target/debug/deps/five8-58a425b5b4afea10.d: /Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/five8-0.2.1/src/lib.rs /Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/five8-0.2.1/src/decode.rs /Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/five8-0.2.1/src/encode.rs /Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/five8-0.2.1/src/unlikely.rs /Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/five8-0.2.1/src/../README.md
+
+/Users/tonyanglesey/Work/Sparks-03-23-2026 USE THIS/sparks-presale/anchor/target/debug/deps/libfive8-58a425b5b4afea10.rlib: /Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/five8-0.2.1/src/lib.rs /Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/five8-0.2.1/src/decode.rs /Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/five8-0.2.1/src/encode.rs /Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/five8-0.2.1/src/unlikely.rs /Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/five8-0.2.1/src/../README.md
+
+/Users/tonyanglesey/Work/Sparks-03-23-2026 USE THIS/sparks-presale/anchor/target/debug/deps/libfive8-58a425b5b4afea10.rmeta: /Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/five8-0.2.1/src/lib.rs /Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/five8-0.2.1/src/decode.rs /Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/five8-0.2.1/src/encode.rs /Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/five8-0.2.1/src/unlikely.rs /Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/five8-0.2.1/src/../README.md
+
+/Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/five8-0.2.1/src/lib.rs:
+/Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/five8-0.2.1/src/decode.rs:
+/Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/five8-0.2.1/src/encode.rs:
+/Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/five8-0.2.1/src/unlikely.rs:
+/Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/five8-0.2.1/src/../README.md:

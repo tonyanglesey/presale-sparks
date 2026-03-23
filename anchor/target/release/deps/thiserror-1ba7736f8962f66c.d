@@ -1,0 +1,10 @@
+/Users/tonyanglesey/Work/Sparks-03-23-2026 USE THIS/sparks-presale/anchor/target/release/deps/thiserror-1ba7736f8962f66c.d: /Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-1.0.69/src/lib.rs /Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-1.0.69/src/aserror.rs /Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-1.0.69/src/display.rs /Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-1.0.69/src/provide.rs
+
+/Users/tonyanglesey/Work/Sparks-03-23-2026 USE THIS/sparks-presale/anchor/target/release/deps/libthiserror-1ba7736f8962f66c.rlib: /Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-1.0.69/src/lib.rs /Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-1.0.69/src/aserror.rs /Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-1.0.69/src/display.rs /Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-1.0.69/src/provide.rs
+
+/Users/tonyanglesey/Work/Sparks-03-23-2026 USE THIS/sparks-presale/anchor/target/release/deps/libthiserror-1ba7736f8962f66c.rmeta: /Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-1.0.69/src/lib.rs /Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-1.0.69/src/aserror.rs /Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-1.0.69/src/display.rs /Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-1.0.69/src/provide.rs
+
+/Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-1.0.69/src/lib.rs:
+/Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-1.0.69/src/aserror.rs:
+/Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-1.0.69/src/display.rs:
+/Users/tonyanglesey/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-1.0.69/src/provide.rs:
